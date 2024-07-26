@@ -8,7 +8,7 @@ caminho_json: Caminho para o arquivo JSON contendo o dicionário de traduções.
 Descrição: Carrega o dicionário de traduções do arquivo JSON especificado.
 Tratamento de Erros: Captura erros de decodificação JSON, arquivo não encontrado e outros erros gerais, registrando-os no log.
 preprocessar_dicionario(traducoes)
-# Parâmetros:
+# Parâmetros: 
 traducoes: Dicionário de traduções.
 Descrição: Pré-processa o dicionário para extrair e armazenar os acrônimos em maiúsculas.
 traduzir_celulas(registro, acronimos, traducoes)
