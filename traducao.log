@@ -1,0 +1,1 @@
+2024-07-25 16:39:41,717 - ERROR - Erro ao processar o arquivo DBF: [Errno 13] Permission denied: '/var/www/today/geoprocessing_translate/qa/resultado/02today.xlsx'
