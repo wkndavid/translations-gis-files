@@ -53,7 +53,7 @@ def traduzir_celulas(registro, acronimos, traducoes):
 def traduzir_dbf_e_salvar(dbf_path, output_path, acronimos, traducoes):
     try:
         tprint("Início do Processamento", font="block")  #título principal usando fonte "block"
-        table = DBF(dbf_path, encoding='utf-8')
+        table = DBF(dbf_path, encoding='latin1')
 
         registros_traduzidos = []
         total_registros = len(table)
@@ -66,7 +66,7 @@ def traduzir_dbf_e_salvar(dbf_path, output_path, acronimos, traducoes):
         df = pd.DataFrame(registros_traduzidos)
 
         print("Salvando em Excel...")
-        df.to_excel(output_path, index=False, engine='openpyxl')
+        df.to_excel(output_path, index=False, engine='openpyxl', encoding='latin1')
 
         logging.info("Arquivo DBF traduzido e salvo com sucesso")
         tprint("Processo Concluído", font="block")  #título principal usando fonte "block"
@@ -76,16 +76,16 @@ def traduzir_dbf_e_salvar(dbf_path, output_path, acronimos, traducoes):
         raise
 
 #caminho para o arquivo JSON com o dicionário de traduções (minificado)
-caminho_json = '/var/www/today/geoprocessing_translate/qa/traducao_minify.json'
+caminho_json = '/var/www/today/translations-esri-arcgis-files/DBFtranslation/traducao_minify.json'
 
 #carrega o dicionário de traduções do arquivo JSON
 traducoes = carregar_dicionario(caminho_json)
 
 #caminho para o arquivo DBF de entrada
-caminho_dbf = '/var/www/today/geoprocessing_translate/qa/ocupacoes_identificadas.dbf'
+caminho_dbf = '/var/www/today/translations-esri-arcgis-files/DBFtranslation/dbf-xlsx2shape.dbf'
 
 #caminho de saída para o arquivo Excel
-caminho_output_dbf = '/var/www/today/geoprocessing_translate/qa/results/01today.xlsx'
+caminho_output_dbf = '/var/www/today/translations-esri-arcgis-files/DBFtranslation//results/01today.xlsx'
 
 #execute as funções para traduzir o DBF e salvar como Excel
 acr_preprocessados = preprocessar_dicionario(traducoes)

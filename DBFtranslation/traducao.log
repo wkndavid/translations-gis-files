@@ -1,0 +1,5 @@
+2024-07-29 15:02:54,130 - ERROR - Erro ao processar o arquivo DBF: 'utf-8' codec can't decode byte 0xc9 in position 18: invalid continuation byte
+2024-07-29 15:04:10,683 - ERROR - Erro ao processar o arquivo DBF: 'utf-8' codec can't decode byte 0xc9 in position 18: invalid continuation byte
+2024-07-29 15:04:56,794 - ERROR - Erro ao processar o arquivo DBF: tprint() got an unexpected keyword argument 'encoding'
+2024-07-29 15:05:17,845 - ERROR - Erro ao processar o arquivo DBF: 'utf-8' codec can't decode byte 0xc9 in position 18: invalid continuation byte
+2024-07-29 15:07:59,412 - INFO - Arquivo DBF traduzido e salvo com sucesso
