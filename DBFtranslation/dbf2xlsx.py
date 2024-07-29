@@ -85,7 +85,7 @@ traducoes = carregar_dicionario(caminho_json)
 caminho_dbf = '/var/www/today/translations-esri-arcgis-files/DBFtranslation/dbf-xlsx2shape.dbf'
 
 #caminho de saída para o arquivo Excel
-caminho_output_dbf = '/var/www/today/translations-esri-arcgis-files/DBFtranslation//results/01today.xlsx'
+caminho_output_dbf = '/var/www/today/translations-esri-arcgis-files/DBFtranslation/results/01today.xlsx'
 
 #execute as funções para traduzir o DBF e salvar como Excel
 acr_preprocessados = preprocessar_dicionario(traducoes)
