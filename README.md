@@ -1,4 +1,4 @@
-# λ translations-esri-arcgis-files  λ
+# translations-esri-arcgis-files
 #
 # Descrição das Funções
 carregar_dicionario(caminho_json)
