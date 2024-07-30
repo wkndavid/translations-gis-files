@@ -1,3 +1,4 @@
+
 # name-repo:translations-gis-files
 #
 # Pasta /results de cada script => resultados =>  para cada script, está por padrão ignorada. Crie-as e execute o script da forma correta passando os caminhos(paths) corretos, use o comando "pwd", para localizar o caminho!
