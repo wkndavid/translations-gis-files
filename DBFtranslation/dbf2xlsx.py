@@ -5,10 +5,10 @@ import logging
 import json
 from art import tprint
 
-# Configurando o logging
+#configurando o logging
 logging.basicConfig(filename='traducao.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-# Função para carregar o dicionário de traduções de um arquivo JSON
+#função para carregar o dicionário de traduções de um arquivo JSON
 def carregar_dicionario(caminho_json):
     try:
         with open(caminho_json, 'r', encoding='utf-8') as f:
@@ -23,11 +23,11 @@ def carregar_dicionario(caminho_json):
         logging.error(f"Erro ao carregar o dicionário de traduções: {str(e)}")
         raise
 
-# Função para pré-processar o dicionário e armazenar os acrônimos
+#função para pré-processar o dicionário e armazenar os acrônimos
 def preprocessar_dicionario(traducoes):
     return {palavra.upper() for palavra in traducoes.keys()}
 
-# Função para traduzir as células
+#função para traduzir as células
 def traduzir_celulas(registro, acronimos, traducoes):
     novo_registro = {}
     for coluna, valor in registro.items():
@@ -42,10 +42,10 @@ def traduzir_celulas(registro, acronimos, traducoes):
         )
     return novo_registro
 
-# Função para ler um arquivo DBF, traduzir e salvar
+#função para ler um arquivo DBF, traduzir e salvar
 def traduzir_dbf_e_salvar(dbf_path, output_path, acronimos, traducoes):
     try:
-        tprint("Início do Processamento", font="thinkertoy")  # Título principal usando uma fonte mais minimalista
+        tprint("Início do Processamento", font="thinkertoy")  #título principal usando uma fonte mais minimalista
         table = DBF(dbf_path, encoding='latin1')
 
         registros_traduzidos = [traduzir_celulas(registro, acronimos, traducoes) for registro in table]
@@ -54,27 +54,27 @@ def traduzir_dbf_e_salvar(dbf_path, output_path, acronimos, traducoes):
         df = pd.DataFrame(registros_traduzidos)
 
         print("Salvando em Excel...")
-        df.to_excel(output_path, index=False, engine='openpyxl')  # Remover 'encoding'
+        df.to_excel(output_path, index=False, engine='openpyxl')  #remover 'encoding'
 
         logging.info("Arquivo DBF traduzido e salvo com sucesso")
-        tprint("Processo Concluido", font="thinkertoy")  # Título principal usando uma fonte mais minimalista
+        tprint("Processo Concluido", font="thinkertoy")  #título principal usando uma fonte mais minimalista
     except Exception as e:
         logging.error(f"Erro ao processar o arquivo DBF: {str(e)}")
         print(f"Erro ao processar o arquivo DBF: {str(e)}")
         raise
 
-# Caminho para o arquivo JSON com o dicionário de traduções (minificado)
+#caminho para o arquivo JSON com o dicionário de traduções (minificado)
 caminho_json = '/var/www/today/translations-gis-files/DBFtranslation/traducao_minify.json'
 
-# Carrega o dicionário de traduções do arquivo JSON
+#carrega o dicionário de traduções do arquivo JSON
 traducoes = carregar_dicionario(caminho_json)
 
-# Caminho para o arquivo DBF de entrada
+#caminho para o arquivo DBF de entrada
 caminho_dbf = '/var/www/today/translations-gis-files/DBFtranslation/dbf-xlsx2shape.dbf'
 
-# Caminho de saída para o arquivo Excel
+#caminho de saída para o arquivo Excel
 caminho_output_dbf = '/var/www/today/translations-gis-files/DBFtranslation/results/brabo01.xlsx'
 
-# Executa as funções para traduzir o DBF e salvar como Excel
+#executa as funções para traduzir o DBF e salvar como Excel
 acr_preprocessados = preprocessar_dicionario(traducoes)
 traduzir_dbf_e_salvar(caminho_dbf, caminho_output_dbf, acr_preprocessados, traducoes)
