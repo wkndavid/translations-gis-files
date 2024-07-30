@@ -17,5 +17,5 @@ gdf = gpd.GeoDataFrame(dados_excel, geometry=geometry, crs='EPSG:4326')
 #caminho para salvar o shapefile localmente (com a extensão .shp)
 caminho_shapefile = '/var/www/today/translations-esri-arcgis-files/XLSX2shapefile/results/result_xlsx2shape.shp'
 
-#saivarOGeoDataFramee como shapefile usando o GeoPandas
+#salvar o GeoDataFrame como shapefile usando o GeoPandas
 gdf.to_file(caminho_shapefile, driver='ESRI Shapefile')
