@@ -21,3 +21,4 @@ caminho_csv = '/var/www/today/translations-gis-files/DBF2csv/deubom.csv'
 
 #converter o arquivo DBF para CSV
 converter_dbf_para_csv(caminho_dbf, caminho_csv)
+ 
