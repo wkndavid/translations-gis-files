@@ -1,0 +1,5 @@
+<<<<<<< HEAD
+=======
+pasta/arquivo criada pra facilitar o salvamento.
+
+>>>>>>> c958d76... [#toolbox] - Pasta para as Toolboxes
