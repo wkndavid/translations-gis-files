@@ -78,3 +78,4 @@ caminho_output_dbf = '/var/www/today/translations-gis-files/DBFtranslation/resul
 #executa as funções para traduzir o DBF e salvar como Excel
 acr_preprocessados = preprocessar_dicionario(traducoes)
 traduzir_dbf_e_salvar(caminho_dbf, caminho_output_dbf, acr_preprocessados, traducoes)
+ 
