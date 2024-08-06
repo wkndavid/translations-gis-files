@@ -86,3 +86,4 @@ try:
     print(f"Arquivo Excel salvo com sucesso em: {caminho_excel}")
 except Exception as e:
     print(f"Erro ao salvar o arquivo Excel: {e}")
+ 
