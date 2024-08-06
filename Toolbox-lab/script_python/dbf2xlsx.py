@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-# -*- coding: latin-1 -*-
 import arcpy
 import pandas as pd
 import re
@@ -8,11 +7,11 @@ import logging
 import json
 import os
 
-#definir o caminho do arquivo de log para o diretório do usuário
-log_dir = os.path.expanduser('~')  #diretório do usuário
+# Definir o caminho do arquivo de log para o diretório do usuário
+log_dir = os.path.expanduser('~')  # Diretório do usuário
 log_path = os.path.join(log_dir, 'traducao.log')
 
-#configuração do log
+# Configuração do log
 logging.basicConfig(filename=log_path, level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def carregar_dicionario(caminho_json):
@@ -61,7 +60,6 @@ def traduzir_dbf_e_salvar(dbf_path, output_path, acronimos, traducoes):
     """Lê um arquivo DBF, traduz e salva como Excel."""
     try:
         arcpy.AddMessage("Iniciando o processamento do arquivo DBF...")
-        tprint("Início do Processamento", font="thinkertoy")  #título principal usando uma fonte mais minimalista
         table = DBF(dbf_path, encoding='latin1')
 
         arcpy.AddMessage("Traduzindo registros do arquivo DBF...")
@@ -71,12 +69,11 @@ def traduzir_dbf_e_salvar(dbf_path, output_path, acronimos, traducoes):
         df = pd.DataFrame(registros_traduzidos)
 
         arcpy.AddMessage("Salvando DataFrame como arquivo Excel...")
-        df.to_excel(output_path, index=False, engine='openpyxl')  #remover 'encoding'
+        df.to_excel(output_path, index=False, engine='openpyxl')  # Remove 'encoding'
 
         mensagem = "Arquivo DBF traduzido e salvo com sucesso como arquivo Excel."
         logging.info(mensagem)
         arcpy.AddMessage(mensagem)
-        tprint("Processo Concluído", font="thinkertoy")  #título principal usando uma fonte mais minimalista
     except Exception as e:
         mensagem = f"Erro ao processar o arquivo DBF: {str(e)}"
         logging.error(mensagem)
@@ -87,9 +84,9 @@ def main():
     """Função principal que executa o processamento do arquivo."""
     try:
         # Obtendo parâmetros do ArcGIS Pro
-        caminho_json = arcpy.GetParameterAsText(0)  #caminho para o arquivo JSON
-        caminho_dbf = arcpy.GetParameterAsText(1)  #caminho para o arquivo DBF
-        caminho_output_dbf = arcpy.GetParameterAsText(2)  #caminho de saída para o arquivo Excel
+        caminho_json = arcpy.GetParameterAsText(0)  # Caminho para o arquivo JSON
+        caminho_dbf = arcpy.GetParameterAsText(1)  # Caminho para o arquivo DBF
+        caminho_output_dbf = arcpy.GetParameterAsText(2)  # Caminho de saída para o arquivo Excel
 
         # Validar parâmetros
         if not arcpy.Exists(caminho_json):
@@ -99,14 +96,14 @@ def main():
             arcpy.AddError(f"O arquivo DBF especificado não existe: {caminho_dbf}")
             return
 
-        #carrega o dicionário de traduções do arquivo JSON
+        # Carrega o dicionário de traduções do arquivo JSON
         arcpy.AddMessage("Iniciando o carregamento do dicionário de traduções...")
         traducoes = carregar_dicionario(caminho_json)
 
-        #preprocessa o dicionário para acrônimos
+        # Preprocessa o dicionário para acrônimos
         acr_preprocessados = preprocessar_dicionario(traducoes)
 
-        #executa as funções para traduzir o DBF e salvar como Excel
+        # Executa as funções para traduzir o DBF e salvar como Excel
         arcpy.AddMessage("Iniciando a tradução do arquivo DBF e salvamento como Excel...")
         traduzir_dbf_e_salvar(caminho_dbf, caminho_output_dbf, acr_preprocessados, traducoes)
     
