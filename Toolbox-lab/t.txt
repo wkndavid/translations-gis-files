@@ -1,0 +1,128 @@
+b983cf5 HEAD@{0}: rebase -i (pick): [.gitignore] - Update
+84e0079 HEAD@{1}: rebase -i (pick): [#XLSX2shapefile] - Pasta-lab Conversor arquivo .xlsx para arquivo shapefile
+f5cd204 HEAD@{2}: commit (amend): [#SHP2xls] - Pasta-lab Conversor arquivo .shp para arquivo .xls
+cb77b80 HEAD@{3}: commit (amend): [#SHP2xls] - Pasta-lab Conversor arquivo .shp para arquivo .xls
+ac5d5a5 HEAD@{4}: commit (amend): [#SHP2xls] - Pasta-lab Conversor arquivo .shp para arquivo .xls
+d08c2e7 HEAD@{5}: rebase -i: fast-forward
+99e3565 HEAD@{6}: rebase -i (start): checkout HEAD~10
+de60e79 HEAD@{7}: rebase -i (finish): returning to refs/heads/main
+de60e79 HEAD@{8}: rebase -i (start): checkout HEAD~10
+de60e79 HEAD@{9}: rebase -i (finish): returning to refs/heads/main
+de60e79 HEAD@{10}: rebase -i (pick): [#README] - Update
+f4d637d HEAD@{11}: rebase -i (pick): [#README] - Update
+5d899fa HEAD@{12}: rebase -i (pick): [#README] - Update
+2e97f3b HEAD@{13}: rebase -i (pick): [#README] - Update
+3b1250a HEAD@{14}: rebase -i (pick): [#Toolbox-lab] - Pasta para as Toolboxes
+4e5102c HEAD@{15}: rebase -i (pick): [#README] - Update
+6a225ae HEAD@{16}: rebase -i (pick): [.gitignore] - Update
+37ea504 HEAD@{17}: rebase -i (pick): [#XLSX2shapefile] - Pasta-lab Conversor arquivo .xlsx para arquivo shapefile
+d08c2e7 HEAD@{18}: rebase -i (pick): [#SHP3xls] - Pasta-lab Conversor arquivo .shp para arquivo .xls
+99e3565 HEAD@{19}: rebase -i (pick): [#DBF2csv] - Pasta-lab Conversor de arquivo .dbf para arquivo .csv
+374c23a HEAD@{20}: rebase -i (pick): [#DBFtranslation] - Pasta-lab toolbox de tradução
+83b9c46 HEAD@{21}: commit (cherry-pick): [#toolbox] - Pasta para as Toolbox
+c958d76 HEAD@{22}: rebase -i (start): checkout HEAD~20
+9dfa775 HEAD@{23}: rebase -i (finish): returning to refs/heads/main
+9dfa775 HEAD@{24}: rebase -i (start): checkout HEAD~8
+9dfa775 HEAD@{25}: rebase -i (finish): returning to refs/heads/main
+9dfa775 HEAD@{26}: rebase -i (start): checkout HEAD~4
+9dfa775 HEAD@{27}: rebase -i (finish): returning to refs/heads/main
+9dfa775 HEAD@{28}: rebase -i (start): checkout HEAD~6
+9dfa775 HEAD@{29}: pull origin main: Fast-forward
+d5a8bd5 HEAD@{30}: rebase -i (finish): returning to refs/heads/main
+d5a8bd5 HEAD@{31}: rebase -i (start): checkout HEAD~5
+d5a8bd5 HEAD@{32}: rebase -i (finish): returning to refs/heads/main
+d5a8bd5 HEAD@{33}: rebase -i (start): checkout HEAD~6
+d5a8bd5 HEAD@{34}: rebase -i (finish): returning to refs/heads/main
+d5a8bd5 HEAD@{35}: rebase -i (start): checkout HEAD~4
+d5a8bd5 HEAD@{36}: checkout: moving from dev to main
+13eb0f1 HEAD@{37}: commit: for save - update
+9a15557 HEAD@{38}: checkout: moving from main to dev
+d5a8bd5 HEAD@{39}: commit: [#Toolbox-lab] - Pasta para as Toolboxes
+0342e74 HEAD@{40}: commit: [#README] - Update
+c087cdb HEAD@{41}: commit (amend): [.gitignore] - Update
+98bd725 HEAD@{42}: commit: [#README] - Update
+bc7725b HEAD@{43}: commit: [#XLSX2shapefile] - Pasta-lab Conversor arquivo .xlsx para arquivo shapefile
+7e5bca3 HEAD@{44}: commit: [#SHP3xls] - Pasta-lab Conversor arquivo .shp para arquivo .xls
+662d392 HEAD@{45}: commit: [#DBF2csv] - Pasta-lab Conversor de arquivo .dbf para arquivo .csv
+ad2bb82 HEAD@{46}: commit: [#DBFtranslation] - Pasta-lab toolbox de tradução
+a142424 HEAD@{47}: pull: Merge made by the 'recursive' strategy.
+c958d76 HEAD@{48}: commit (amend): [#toolbox] - Pasta para as Toolboxes
+b88cf14 HEAD@{49}: commit: [#toolbox] - Pasta para as Toolbox
+0eec388 HEAD@{50}: commit: add x.txt
+a8ebec3 HEAD@{51}: commit: remove x.txt
+8d8b911 HEAD@{52}: commit: add folder salvar
+e850f94 HEAD@{53}: commit: removes
+5cc9540 HEAD@{54}: commit: [#update] - solve error dbf2cvs
+d091ddb HEAD@{55}: commit: [#update] - Update main script
+e5f1fc3 HEAD@{56}: commit: [#update] - Update main script
+9b1631c HEAD@{57}: commit: [#update] - Update toolbox
+5b6d47e HEAD@{58}: commit: [#toolbox] - Abrir Toolbox
+d930758 HEAD@{59}: commit: [#update] - update main script python
+ca4bbf5 HEAD@{60}: commit: Toolbox DBFtranslater
+5faf317 HEAD@{61}: commit: hot update
+182eda8 HEAD@{62}: commit (merge): update README
+e025ba5 HEAD@{63}: commit: add files for script SHP2xls
+3ba4e42 HEAD@{64}: commit: update main script for tranlations
+4cd3987 HEAD@{65}: commit: main script DBF2csv
+43c6a0e HEAD@{66}: reset: moving to HEAD~1
+04ef0ce HEAD@{67}: commit: hot save README.md
+43c6a0e HEAD@{68}: commit: lab script
+eaf4d72 HEAD@{69}: commit: hot save
+858e274 HEAD@{70}: commit: hot save
+acd8d57 HEAD@{71}: commit: update script SHP2xls
+b81217b HEAD@{72}: commit: script DBF2cvs-utf8
+ca4043c HEAD@{73}: reset: moving to HEAD
+ca4043c HEAD@{74}: reset: moving to HEAD
+ca4043c HEAD@{75}: commit: hot save
+24ecc21 HEAD@{76}: commit: hot save
+6e2e74a HEAD@{77}: commit: hot save
+43ab3d7 HEAD@{78}: commit: only for save
+def562e HEAD@{79}: commit (amend): deletet file xlsx test
+5b55dc8 HEAD@{80}: commit: deletet file xlsx test
+168e6d8 HEAD@{81}: commit: hot update README
+b2c21dd HEAD@{82}: checkout: moving from main to main
+b2c21dd HEAD@{83}: commit: urgent push
+9679daf HEAD@{84}: commit: modifying .gitignore
+522d121 HEAD@{85}: reset: moving to HEAD
+522d121 HEAD@{86}: commit: mofifying .gitignore
+0a1c516 HEAD@{87}: reset: moving to HEAD
+0a1c516 HEAD@{88}: commit: update
+1fe38fe HEAD@{89}: commit: [update]
+794daca HEAD@{90}: commit: [update] - alter paths and add files test
+2899909 HEAD@{91}: commit: script: shapefile .shp for xls(excel file)
+33d6543 HEAD@{92}: commit: script: xls for shapefile
+575578e HEAD@{93}: commit: update
+606bab8 HEAD@{94}: commit: first part ok
+8bb2080 HEAD@{95}: commit: update
+09361b5 HEAD@{96}: commit: alter origin structure folder
+c2c16b6 HEAD@{97}: commit: alter origin structure folder
+c532f8c HEAD@{98}: commit: update
+bca8406 HEAD@{99}: commit: main script
+9ef32e2 HEAD@{100}: pull origin main: Merge made by the 'recursive' strategy.
+4626556 HEAD@{101}: commit: add .gitignore file
+b7efa44 HEAD@{102}: filter-branch: rewrite
+f549fee HEAD@{103}: commit: add ocupacoes_identificadas.dbf ao .gitignore
+57b81ec HEAD@{104}: commit: add ocupacoes_identificadas.dbf on .gitignore
+b5c423e HEAD@{105}: commit: add .gitignore
+1ac456b HEAD@{106}: commit: add file grid on Git LFS
+7ef6acc HEAD@{107}: commit: push
+642c378 HEAD@{108}: commit: add file grid on Git LFS
+5aefcad HEAD@{109}: commit: 'merge'
+6cc97e2 HEAD@{110}: commit (merge): merge
+b85d584 HEAD@{111}: commit: main script python
+1ceb511 HEAD@{112}: commit: traducao.log file
+6f6deeb HEAD@{113}: commit: traducao_minified file
+6ee27d7 HEAD@{114}: commit: READ.ME
+1a836bc HEAD@{115}: reset: moving to HEAD
+1a836bc HEAD@{116}: commit (amend): main script python
+fbc1627 HEAD@{117}: reset: moving to HEAD~2
+3717da1 HEAD@{118}: reset: moving to HEAD~1
+54431c2 HEAD@{119}: reset: moving to HEAD~1
+e758cb4 HEAD@{120}: commit: readme edit-01
+54431c2 HEAD@{121}: commit: READ.ME
+3717da1 HEAD@{122}: commit: file of log
+f34f47e HEAD@{123}: commit: translations minified
+fbc1627 HEAD@{124}: commit: add main script python
+26213fb HEAD@{125}: Branch: renamed refs/heads/main to refs/heads/main
+26213fb HEAD@{127}: Branch: renamed refs/heads/master to refs/heads/main
+26213fb HEAD@{129}: commit (initial): first commit
