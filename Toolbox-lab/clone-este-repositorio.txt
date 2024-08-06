@@ -1,0 +1,1 @@
+- Clone caso a toolbox não rode de primeira devido o local do script.
